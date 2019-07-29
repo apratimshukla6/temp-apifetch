@@ -4,13 +4,39 @@
 body {
   margin: 0;
 }
+
+.NavBar .navbar{
+  z-index:500;
+  position:fixed;
+  width:100%;
+  background:linear-gradient(to right, rgb(18, 36, 88), rgb(5, 48, 250));
+}
+
+.btn1{
+  height:50px;
+  width:100px;
+  size:50px;
+  background:transparent;
+  margin-left:1030px;
+	transition: all 0.5s;
+  border-radius:5px;
+  color:white;
+  font-weight:600;
+}
+
+.btn1:hover{
+  transform: scale(1.05);
+  outline:0px;
+}
+
 #parallax-container {
   height: 1000px;
+  z-index:0;
   display: block;
 }
 #parallax-container div {
   position: fixed;
-  top: 0;
+  top: 0px;
   background-position: center !important;
   transform: translateY(0px);
   height: 1000px;
