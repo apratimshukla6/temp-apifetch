@@ -4,39 +4,104 @@
   <meta charset="UTF-8">
   <title>APIFetch</title>
   <link rel="stylesheet" href="./style.css">
-
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 
 
-
 <body>
-  <div class="NavBar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img  style="height:40px ; width:174px;" src="./img/logo.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-          <button class="btn1" type="submit">Register</button>
-    </nav>
-  </div>
+  <header>
+    <div class="NavBar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#"><img  style="height:40px ; width:174px;" src="./img/logo.png"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <button class="btn1" type="submit"><img  id="reg" src="Register.png" ></button>
+      </nav>
+    </div>
+    
+    <div id="parallax-container">
+      <div style="background: url('img/layer0.jpg');"></div>
+      <div style="background: url('img/layer1.png');"></div>
+      <div style="background: url('img/layer2.png');"></div>
+      <div style="background: url('img/layer3.png');"></div>
+      <div style="background: url('img/layer4.png');"></div>
+      <div style="background: url('img/layer5.png');"></div>
+      <div style="background: url('img/layer6.png');"></div>
+      <div style="background: url('img/layer7.png');"></div>
+      <div style="background: url('img/layer8.png');"></div> 
+    </div>
+  </header>
+<section>
+ 
+      <main id="main">
+          <article id="holder">
+            <section id="sec-1">
+              <p>Scroll</p>
+            </section>
+            <section id="sec-2">ABCDE<h1>sfgsdsdf</h1></section>
+           <section id="sec-3"></section>
+           <section id="sec-4"></section>
+           <section id="sec-5"></section>
+          </article>
+      </main>
+    
+</section>
 
-<div id="parallax-container">
-  <div style="background: url('img/layer0.jpg');"></div>
-  <div style="background: url('img/layer1.png');"></div>
-  <div style="background: url('img/layer2.png');"></div>
-  <div style="background: url('img/layer3.png');"></div>
-  <div style="background: url('img/layer4.png');"></div>
-  <div style="background: url('img/layer5.png');"></div>
-  <div style="background: url('img/layer6.png');"></div>
-  <div style="background: url('img/layer7.png');"></div>
-  <div style="background: url('img/layer8.png');"></div>
-</div>
+  
+  <footer>
+      <p>Footer</p>
+  </footer>
+  
+</body>
 
-<!-- partial -->
-  <script  src="./script.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script  src="./script.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+<script>let ww = window.innerWidth;
+let wh = window.innerHeight;
+let allSec = document.querySelectorAll("section");
+let mw = ww * allSec.length;
+let mh = wh * allSec.length;
+
+document
+  .getElementById("main")
+  .setAttribute("style", "330px; width:" + mw + "px; height:" + mh + "px;");
+document
+  .getElementById("holder")
+  .setAttribute("style", "330px; width:" + mw + "px; height:" + mh + "px;");
+
+for (var i = 0; i < allSec.length; i++) {
+  allSec[i].setAttribute("style", "width:" + ww + "px;");
+}
+
+const scrollProgress = elem => {
+  let body = document.body;
+  let html = document.documentElement;
+  window.onscroll = () => {
+    let winHeight = window.innerHeight;
+    let docHeight = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    );
+    let topDis =
+      window.pageYOffset ||
+      (document.documentElement || document.body.parentNode || document.body)
+        .scrollTop;
+    let a = docHeight - winHeight;
+    let b = a / 300;
+    let c = topDis / b;
+    let x = allSec.length - 1;
+    let d = c * x;
+    document.getElementById(elem).style.left = "-" + d + "%";
+  };
+};
+scrollProgress("holder");
+</script>
 </html>

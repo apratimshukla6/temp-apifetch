@@ -1,9 +1,12 @@
 ::-webkit-scrollbar { 
     display: none; 
 }
+
+
 body {
   margin: 0;
 }
+
 
 .NavBar .navbar{
   z-index:500;
@@ -13,8 +16,8 @@ body {
 }
 
 .btn1{
-  height:50px;
-  width:100px;
+  height:60px;
+  width:80px;
   size:50px;
   background:transparent;
   margin-left:1030px;
@@ -24,16 +27,24 @@ body {
   font-weight:600;
 }
 
+#reg{
+  width:50px;
+  height:50px;
+}
+
 .btn1:hover{
   transform: scale(1.05);
+  background-color:white;
+  color:blue;
   outline:0px;
 }
 
 #parallax-container {
-  height: 1000px;
+  height: 200px;
   z-index:0;
   display: block;
 }
+
 #parallax-container div {
   position: fixed;
   top: 0px;
@@ -41,4 +52,78 @@ body {
   transform: translateY(0px);
   height: 1000px;
   width: 100%;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Josefin Sans Regular"), local("JosefinSans-Regular"),
+    url(https://fonts.gstatic.com/s/josefinsans/v12/Qw3aZQNVED7rKGKxtqIqX5EUDXx4Vn8sig.woff2)
+      format("woff2");
+  unicode-range: U+0000-00ff, U+0131, U+0152-0153, U+02bb-02bc, U+02c6, U+02da,
+    U+02dc, U+2000-206f, U+2074, U+20ac, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+html,
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  overscroll-behavior: none;
+}
+
+p {
+  padding: 20px;
+  font-size: 24px;
+}
+
+#holder {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+section {
+  width: 1024px;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  height: 100vh;
+  float: left;
+}
+
+section:nth-child(1) {
+  background: #db285200;
+}
+
+section:nth-child(2) {
+  background: rgba(17, 152, 255, 0.986);
+}
+
+section:nth-child(3) {
+  background: rgb(238, 171, 0);
+}
+
+section:nth-child(4) {
+  background: rgba(238, 102, 34, 0);
+}
+
+section:nth-child(5) {
+  background: #f3000000;
+}
+
+section:nth-child(6) {
+  background: #7dff0400;
 }
